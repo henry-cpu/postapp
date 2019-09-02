@@ -11,15 +11,15 @@ export class PostComponent implements OnInit {
   @Input() loveIts: number;
   // tslint:disable-next-line:variable-name
   create_at: Date;
+  constructor() {
+    this.create_at = new Date();
+  }
   loveItsBoolean() {
     if (this.loveIts > 0) {
       return true;
     } else if (this.loveIts < 0) {
       return false;
     }
-  }
-  constructor() {
-    this.create_at = new Date();
   }
   like(valeur) {
     if (valeur === true) {
@@ -28,7 +28,6 @@ export class PostComponent implements OnInit {
       this.loveIts--;
     }
   }
-
   ngOnInit() {
   }
 

@@ -2,7 +2,8 @@
               'list-group-item-success': loveIts > 0,
               'list-group-item-danger': loveIts < 0}">
   <div style="text-align: right">{{create_at | date: 'short'}}</div>
-  <h2>{{title}} <span class="badge">{{loveIts}}</span> </h2>
+  <h2>{{title}}</h2>
+  <span class="badge">{{loveIts}}</span>
   <p>{{content}}</p>
   <button class="btn btn-success"
           (click)="like(true)">Love It</button>
